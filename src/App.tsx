@@ -10,13 +10,13 @@ function App() {
 
   return (
     <>
-      <div className='position-absolute inset-0 bg-white dark:bg-slate-700'>
+      <div className='h-full overflow-y-scroll bg-white dark:bg-slate-700'>
         <div id="kn-main-nav" className='shadow sticky'>
           <div className='px-6 py-2 h-16 flex items-center justify-between dark:border-b container mx-auto'>
             <div className='flex items-center justify-between space-x-2'>
 
             </div>
-            <div className='hidden lg:flex items-center justify-between space-x-2'>
+            <div className='hidden md:flex items-center justify-between space-x-2'>
               <div>
                 <button type='button' onClick={() => setPage(1)} className={clsx('capitalize inline-flex justify-center items-center rounded-lg text-sm font-semibold py-3 px-4 text-slate-900 dark:text-white ring-1 ring-slate-900/10 hover:bg-gray-300 hover:ring-slate-900/15 hover:text-slate-900', {
                   "bg-sky-600 text-white": page === 1
@@ -42,7 +42,7 @@ function App() {
                 </button>
               </div>
             </div>
-            <button className={clsx('justify-center items-center rounded-lg text-sm font-semibold py-3 px-4 text-white ring-1 ring-slate-900/10 bg-sky-600 hover:bg-sky-800 hover:ring-slate-900/15 inline-flex lg:hidden')} onClick={() => setOpenMenu(!openMenu)}>
+            <button className={clsx('justify-center items-center rounded-lg text-sm font-semibold py-3 px-4 text-white ring-1 ring-slate-900/10 bg-sky-600 hover:bg-sky-800 hover:ring-slate-900/15 inline-flex md:hidden')} onClick={() => setOpenMenu(!openMenu)}>
               <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M4 8l16 0" />
