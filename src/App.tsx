@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Psalm from './assets/psalm';
 import clsx from 'clsx'
 import HocPhanDoan from './modules/HocPhanDoan/HocPhanDoan';
 import OnTungCau from './modules/OnTungCau/OnTungCau';

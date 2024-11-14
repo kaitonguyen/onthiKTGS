@@ -46,7 +46,7 @@ const OnTungCau = () => {
     const [currentQuestion, setCurrentQuestion] = useState<number>(1)
     const [currentVerse, setCurrentVerse] = useState<string>("");
     const [history, setHistory] = useState<HistoryInterface[]>([]);
-    const [error, setError] = useState<string>();
+    // const [error, setError] = useState<string>();
     const [isRight, setIsRight] = useState<boolean>();
     const [start, setStart] = useState<boolean>(false);
 
@@ -125,7 +125,7 @@ const OnTungCau = () => {
         })
         setCurrentVerse("")
         setHistory([])
-        setError(undefined)
+        // setError(undefined)
         setIsRight(undefined)
         setIsChecked(false)
         setShowResult(false)
