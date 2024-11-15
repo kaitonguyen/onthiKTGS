@@ -3,6 +3,7 @@ import clsx from "clsx";
 import HocPhanDoan from "./modules/HocPhanDoan/HocPhanDoan";
 import OnTungCau from "./modules/OnTungCau/OnTungCau";
 import DienKhuyet from "./modules/DienKhuyet/DienKhuyet";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -252,24 +253,9 @@ function App() {
 
         <footer className="p-6 container mx-auto">
           <span>Copyright &copy; {new Date().getFullYear()} Kỳ Nguyễn.</span>
-          <div>
-            <script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7954561166324077"
-              crossOrigin="anonymous"
-            ></script>
-            <ins
-              className="adsbygoogle"
-              style={{ display: "block" }}
-              data-ad-client="ca-pub-7954561166324077"
-              data-ad-slot="2292588089"
-              data-ad-format="auto"
-              data-full-width-responsive="true"
-            ></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-          </div>
         </footer>
       </div>
+      <Analytics />
     </>
   );
 }
