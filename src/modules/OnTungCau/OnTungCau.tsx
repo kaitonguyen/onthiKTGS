@@ -57,7 +57,7 @@ const OnTungCau = () => {
         })
     }
 
-    const handleChangeVerse = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChangeVerse = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setCurrentVerse(e.target?.value || "");
     }
 
@@ -272,6 +272,7 @@ const OnTungCau = () => {
                                 <>
                                     <div className="px-6 my-6 mx-auto container">
                                         <div className='bg-white dark:bg-slate-900 shadow rounded p-6'>
+                                    {/* PC */}
                                             <div className="flex items-center">
                                                 <label className="font-bold border-b-2 border-dashed border-sky-600 text-sky-600 hover:cursor-pointer" onClick={() => alert(reviewVerse[currentQuestion - 1].text)}>Thi thiên 107:{reviewVerse[currentQuestion - 1].number}</label>
                                                 <span className="text-sm ms-2">
@@ -285,8 +286,9 @@ const OnTungCau = () => {
                                                 </span>
                                                 <i>(Click vào để ôn lại)</i>
                                             </div>
-                                            <input type="text" id="verse-txt" className="w-full mt-2 px-2 py-10 ring-1 ring-slate-900/10 shadow-sm rounded-md dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 text-xl" onKeyDown={handleKeyDown} onChange={handleChangeVerse} value={currentVerse} autoComplete="off" autoFocus readOnly={isChecked} />
+                                            <input type="text" id="verse-txt" className="w-full hidden md:block mt-2 px-2 py-10 ring-1 ring-slate-900/10 shadow-sm rounded-md dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 text-xl" onKeyDown={handleKeyDown} onChange={handleChangeVerse} value={currentVerse} autoComplete="off" autoFocus readOnly={isChecked} />
                                             <span className="mt-2 hidden lg:block">Nhấn phím Enter để kiểm tra và nhấn Enter một lần nữa để sang câu tiếp theo.</span>
+                                            <textarea className="w-full md:hidden mt-2 px-2 py-2 ring-1 ring-slate-900/10 shadow-sm rounded-md dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 text-xl" rows={7} onChange={handleChangeVerse} value={currentVerse} autoComplete="off" autoFocus readOnly={isChecked}></textarea>
                                             <div className="flex lg:hidden">
                                                 <button type="button" className={clsx('capitalize inline-flex justify-center rounded-lg text-sm font-semibold mt-2 py-3 px-4 text-white ring-1 ring-slate-900/10 bg-sky-600 hover:bg-gray-300 hover:ring-slate-900/15 hover:text-slate-900')} onClick={handleClick}>
                                                     {isChecked ? "Tiếp tục" : "Kiểm tra"}
